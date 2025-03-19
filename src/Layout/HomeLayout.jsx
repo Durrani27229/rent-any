@@ -2,7 +2,7 @@ import { CloseOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design
 import { Layout, Drawer, Button, Dropdown, Avatar, Input } from 'antd'
 import { Header, Content } from 'antd/es/layout/layout'
 import Sider from 'antd/es/layout/Sider'
-import { Sidebar, menu } from './Sidebar'
+import { Sidebar, menu } from './SideBar'
 import { useState } from 'react'
 import DropDownHeader from '../Component/DropDownLang'
 import DropDownNotify from '../Component/DropDownNotify'
