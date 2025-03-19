@@ -70,3 +70,66 @@ li.ant-menu-item{
   transition: all 0.3s ease-out !important; /* Adding transition for smooth effect */
   border-radius: 12px !important; /* Ensuring items start with rounded corners */
 }
+.login-select>.ant-select-selector {
+  border: 0px !important;
+  color: #4A7ABC !important;
+  padding: 0px !important;
+}
+.custom-select-arrow .ant-select-arrow {
+  color: rgba(74, 122, 188, 1);
+}
+
+.type-here .ant-input{
+  background-color: rgba(244, 247, 254, 1) !important;
+  width: 98%;
+  height: 451px;
+  border-radius: 10px;
+  border: none;
+}
+.ant-modal-close{
+  color: white !important;
+  background-color: red !important;
+  border-radius: 50% !important;
+  font-weight: 900 !important;
+  top: 26px !important;
+  right: 33px !important;
+}
+.ant-modal .ant-modal-header{
+  padding: 10px 20px !important;
+}
+.ant-drawer .ant-drawer-close span {
+  color: black !important;
+}
+.ant-drawer .ant-drawer-header{
+  background-color: white !important;
+}
+@media only screen and (max-width: 768px) {
+  .ant-dropdown-trigger{
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* .search-bar{
+    width: 40% !important;
+  } */
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  .search-bar{
+    width: 40% !important;
+  }
+   .ant-space-item div{
+    
+    font-size: 14px !important; 
+    
+   }
+}
+@media only screen and (min-width: 768px) and (max-width: 820px){
+  .search-bar{
+    width: 40% !important;
+  }
+   .ant-space-item div{
+    
+    font-size: 13px !important; 
+    
+   }
+}

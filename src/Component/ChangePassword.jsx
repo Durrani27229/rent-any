@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
-import Btn from '../Component/Btn';
-const EditProfile = ({ isModalOpen, setIsModalOpen }) => {
+import Btn from './Btn';
+const ChangePassword = ({ isModalOpen, setIsModalOpen }) => {
   
   const showModal = () => {
     setIsModalOpen(true);
@@ -15,12 +15,12 @@ const EditProfile = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <>
       
-      <Modal title="Change Password" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-      <div className="change-password">
-          <div className="flex items-center justify-between">
+      <Modal title="Change Password" open={isModalOpen} footer={null} onOk={handleOk} onCancel={handleOk}>
+      <div className="change-password red-hat" >
+          {/* <div className="flex items-center justify-between">
             <p className="font-bold text-lg">Change Password</p>
             <img src="cancel.png" width={22} height={22} alt="cancel" />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-[5px]">
             <p className="font-medium text-base">
               Current Password: <span>*</span>
@@ -40,11 +40,11 @@ const EditProfile = ({ isModalOpen, setIsModalOpen }) => {
             <input type="text" placeholder="Enter Confirm Password" />
           </div>
           <div>
-            <Btn title="Save" />
+            <Btn title="Save" onClick={handleOk} />
           </div>
-        </div>
+      </div>
       </Modal>
     </>
   );
 };
-export default EditProfile;
+export default ChangePassword;

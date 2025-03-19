@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = (props) => {
   return (
-    <button style={{
+    <button onClick={props.onClick} style={{
       backgroundColor: '#4A7ABC',
       color: 'white',
       fontSize: '14px',
@@ -12,7 +12,8 @@ const Button = (props) => {
       textAlign: 'center',
       width: '100%',
       height: '56px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      marginTop: props.marginTop,
     }}>
       {props.title}
     </button>

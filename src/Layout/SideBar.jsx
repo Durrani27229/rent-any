@@ -6,8 +6,9 @@ import { UserOutlined } from '@ant-design/icons';
 // import { items } from '../../config/sidebarlinks';
 import { items } from '../config/sidebarlinks.js';   
 import { useEffect, useState } from 'react';
-import EditProfile from '../Component/EditProfile.jsx';
-import NewProfile from '../Component/NewProfile.jsx';
+import EditProfile from '../Component/ChangePassword.jsx';
+// import NewProfile from '../Component/NewProfile.jsx';
+import ProfileEdit from '../Component/ProfileEdit.jsx';
 // import TansText from '../higherOrder/TansText';
 
 
@@ -45,7 +46,7 @@ export const Sidebar = () => {
     return (
         <div className="text-white flex flex-col bg-white">
             <div className="flex items-center justify-center h-20 bg-white">
-                <img src="/Logo.png" alt="logo" width={150} height={26}/>
+                <img onClick={() => navigate('/')} src="/Logo.png" alt="logo" width={150} height={26}/>
             </div>
             <Menu
                 theme="light"
@@ -73,6 +74,7 @@ export const Sidebar = () => {
 
 
 export const menu = () => {
+    const [changeModal, setChangeModal] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
     return (
@@ -93,13 +95,14 @@ export const menu = () => {
             </div>
             <div className='flex items-center gap-[10px]'>
                 <img onClick={()=>{
-                    setIsModalOpen(true)
+                    // setIsModalOpen(true)
+                    setChangeModal(true)
                 }} src="Lock.png" width={24} height={24} alt="edit" />
                 <p>Change Password</p>
             </div>
          </div>
             <Button
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/login')}
                 // icon={<img className='w-[40px]' src="logout.png" />}
                 className='logout-btn font-medium
 '
@@ -108,8 +111,9 @@ export const menu = () => {
             </Button>
         </Menu>
 
-        {/* <EditProfile isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
-        <NewProfile isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <EditProfile isModalOpen={changeModal} setIsModalOpen={setChangeModal}  />
+        <ProfileEdit isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        {/* <NewProfile isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
         </>
     )
 }

@@ -13,7 +13,7 @@ function HomeLayout({ children }) {
     const [collapsed, setCollapsed] = useState(false);
     const [drawerVisible, setDrawerVisible] = useState(false);
     // Media query for responsive layout: max-width 768px (mobile)
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const isMobile = window.matchMedia('(max-width: 992px)').matches;
     // const { isDarkMode, toggleTheme } = useTheme() as any;
     return (
         <Layout>
@@ -61,12 +61,14 @@ function HomeLayout({ children }) {
                     }
                     <Input
                         placeholder="Search"
-                        style={{
-                            width: isMobile ? 250 : 300,
-                            height: 45,
-                            borderRadius: 15,
-                            backgroundColor: 'white',
-                        }}
+                        className='search-bar'
+                        // style={{
+                        //     width: isMobile ? 250 : 300,
+                        //     height: 45,
+                        //     borderRadius: 15,
+                        //     backgroundColor: 'white',
+                        // }}
+                        
                         // className='h-[56px]'
                         prefix={<img className='w-4' src="search.png" />}
                     />

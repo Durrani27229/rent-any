@@ -94,7 +94,7 @@ function Home() {
         </div>
        
        <div className="mt-5">
-       <Table dataSource={data} columns={column} pagination={false} />
+       <Table dataSource={data} columns={column} pagination={false} scroll={{ x: 800 }} />
        </div>
 
       </div>   
