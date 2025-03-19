@@ -133,3 +133,9 @@ li.ant-menu-item{
     
    }
 }
+@media only screen and (max-width: 576px) {
+  .btn-group button{
+    font-size: 10px !important;
+  }
+  
+}
